@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* body styles */
+body {
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    font-family: system-ui, sans-serif;
+    background-color: #EBEBF3;
+  }
+
+/* alert styles */
+  
+.alert {
+    width: 250px;
+    height: 30px;
+    background-color: #72a2a2;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 5px;
+    color: #fff;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    visibility: hidden;
+    font-size: 12px;
+    transition: 300ms all;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert.active {
+    opacity: 1;
+    visibility: visible;
+    top: 30px;
+}
+
+/* h1 styles */
+
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #0C1226;
+  }
+  h1::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  h1::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: hsl(200 100% 80%);
+    z-index: -1;
+    transition: transform .3s ease;
+  }
+  
+  h1 {
+    position: relative;
+    font-size: 5rem;
+  }
+  
+  html {
+    block-size: 100%;
+    inline-size: 100%;
+  }
+  
+  @media (orientation: landscape) {
+    body {
+      grid-auto-flow: column;
+    }
+  }
+  
+
+
+/* span styles */
+span {
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    height: 3rem;
+    margin: 0.5rem 0 0.5rem 0;
+    justify-content: center;
+
+}
+/* icon */
+i{
+    display: inline-flex;
+    margin: 0.5rem 0rem 0 10em ;
+    cursor: pointer;
+    width: 0%;
+}
+/* hover effects */
+i:hover{
+    transform: scale(1.3);
+    color: aliceblue;
+}
+
+b:hover{
+    transform: scale(1.1);
+    color: aliceblue;
+}
+span:hover{
+    transform: scale(1.1);
+}
+
+/* pallete */
+
+.pallete{
+    margin: 0 2rem 0 2rem;
+}
